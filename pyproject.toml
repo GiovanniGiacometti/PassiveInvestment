@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "passive-investment"
+version = "0.0.0"
+authors = [ {name="Giovanni Giacometti"}]
+description = ""
+readme = "README.md"
+requires-python = ">=3.10"
+# list of project dependencies
+dependencies = [
+    "numpy==1.26",
+    "polars",
+    "pandas",
+    "matplotlib",
+    "yfinance==0.2.37",
+]
+
+
+# optional grouped dependencies that are installed only when explicitly set
+[project.optional-dependencies]
+# dev dependencies are installed during development but no for package
+dev = [
+    "ruff",
+    "ipykernel",
+]
+
+# dependencies needed to build package
+build = ["twine", "build"]
